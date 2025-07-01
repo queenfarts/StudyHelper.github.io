@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="TaskHandler.js"></script>
+    <title>Study Helper</title>
+</head>
+<body>
+
+<h1 style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 75px; text-decoration: underline;">Study Helper</h1>
+
+    <div id="titlebox">
+        <h1 class="title">Tasks:</h1>
+    </div>
+<br><br>
+    <div id="tasks">
+        <ul id="tasklist">
+
+        </ul>
+    </div>
+
+    <button id="RemoveTasks" onclick="ClearAllTasks()">Remove all tasks</button>
+
+    <div id="taskmaker">
+        <h2 class="title">Make a task</h1>
+        <input id="tasknameinput" type="text">
+        <button id="createtaskbutton" onclick="CreateTask()">Create Task</button>
+    </div>
+
+</body>
+</html>

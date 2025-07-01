@@ -1,0 +1,169 @@
+/*ANIMATION KEYFRAMES*/
+
+@keyframes twitch {
+    0%, 100% {transform: scale(1.0);}
+    25% {transform: scale(0.975);}
+    50% {transform: scale(1.025);}
+}
+
+@keyframes rotatetwitch {
+    0%, 100% {transform: rotate(0deg);}
+    33% {transform: rotate(2.5deg);}
+    66% {transform: rotate(-2.5deg);}
+}
+
+@keyframes enlarge {
+    0% {transform: scale(1);}
+    100% {transform: scale(1.2);}
+}
+
+@keyframes changecolor {
+    0% {background-color: hsl(0, 0%, 15%);}
+    100% {background-color: hsl(0, 100%, 33%);}
+}
+
+/*STYLING*/
+
+body {
+    background-color: hsl(0, 0%, 0%);
+    padding: 10px;
+}
+
+#titlebox {
+    border: 1px solid hsl(0, 0%, 15%);
+    border-radius: 24px;
+    display: inline-block;
+    background-color: hsl(0, 0%, 5%);
+}
+
+#taskmaker {
+    border: 1px solid hsl(0, 0%, 15%);
+    border-radius: 24px;
+    display: inline-block;
+    background-color: hsl(0, 0%, 5%);
+}
+
+#tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#tasks li {
+    margin-bottom: 20px
+}
+
+#tasks li div {
+    display: flexbox;
+    border: 1px solid hsl(0, 0%, 15%);
+    border-radius: 24px;
+    margin: 10px 0;
+    background-color: hsl(0, 0%, 10%);
+    padding: 10px;
+}
+
+.title {
+    margin: 20px;
+    color: white;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.tasktext {
+    
+    border: 1px solid hsl(0, 0%, 15%);
+    padding: 10px;
+    border-radius: 24px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.taskbutton {
+    margin-left: 10px;
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+}
+
+#createtaskbutton {
+    margin-right: 10px;
+    background-color: hsl(0, 0%, 15%);
+    margin: 10px;
+    border: 1px solid hsl(0, 0%, 20%);
+    border-radius: 100px;
+    outline: none;
+    box-shadow: 0px 4px 10px black;
+    color: white;
+    padding: 8px;
+    height: 30px;
+}
+
+#tasknameinput {
+    background-color: hsl(0, 0%, 15%);
+    margin: 10px;
+    border: 1px solid hsl(0, 0%, 20%);
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 0px 4px 10px black;
+    color: white;
+    padding: 8px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#tasknameinput:hover {
+    box-shadow: 0px 0px 10px rgb(28, 28, 28);
+    animation: twitch 0.5s ease-in-out;
+}
+
+#createtaskbutton:hover {
+    background-color: hsl(0, 0%, 20%);
+    border-color: hsl(0, 0%, 25%);
+    animation: rotatetwitch 0.5s ease-in-out;
+}
+
+#tasklist li button {
+    text-align: center;
+    width: 2.2em;
+    height: 4em;
+    margin-left: 10px;
+    background-color: hsl(0, 0%, 15%);
+    border: 1px solid hsl(0, 0%, 20%);
+    border-radius: 100%;
+    outline: none;
+    box-shadow: 0px 4px 10px black;
+    color: white;
+    padding: 8px;
+    height: 30px;
+}
+
+#tasklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#tasklist li button:hover {
+    animation: enlarge 0.1s ease-in-out;
+    animation: changecolor 0.1s ease-in-out;
+    transform: scale(1.2);
+    border-color: hsl(0, 100%, 10%);
+    background-color: hsl(0, 100%, 33%);
+}
+
+#RemoveTasks {
+    display: block;
+    font-size: 0.9rem;
+    background-color: hsl(0, 100%, 29%);
+    margin: 10px;
+    border: 1px solid hsl(0, 100%, 12%);
+    border-radius: 100px;
+    outline: none;
+    box-shadow: 0px 4px 10px black;
+    color: white;
+    height: 2em;
+    width: 10em;
+}
+
+#RemoveTasks:hover {
+    background-color: hsl(0, 100%, 20%);
+}
