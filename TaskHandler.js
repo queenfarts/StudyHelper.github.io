@@ -19,6 +19,12 @@ function CreateTask() {
         return
     }
 
+    if (InputBox.value.trim().startsWith("<")) {
+        alert('Illegal characters!')
+        InputBox.value = "";
+        return
+    }
+
     const TaskName = InputBox.value.trim();
 
     InputBox.value = "";
@@ -66,3 +72,14 @@ function DeleteBox(element) {
 function ClearAllTasks() {
     document.getElementById("tasklist").innerHTML = ""
 }
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Enter") {
+
+        if (document.getElementById("tasknameinput").value === "") {
+            return
+        }
+
+        CreateTask();
+    }
+});
